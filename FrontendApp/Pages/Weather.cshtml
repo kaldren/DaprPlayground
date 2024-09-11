@@ -1,5 +1,5 @@
 ﻿@page
-@model PrivacyModel
+@model WeatherModel
 @{
     ViewData["Title"] = "Weather";
 }
@@ -15,7 +15,4 @@
             <li>@forecast.Date - @forecast.TemperatureC°C - @forecast.TemperatureF°F - @forecast.Summary</li>
         }
     </ul>
-}
-else {
-    <p>Loading...</p>
 }

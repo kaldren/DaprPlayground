@@ -4,12 +4,12 @@ using System.Net.Http.Json;
 
 namespace FrontendApp.Pages;
 
-public class PrivacyModel : PageModel
+public class WeatherModel : PageModel
 {
-    private readonly ILogger<PrivacyModel> _logger;
+    private readonly ILogger<WeatherModel> _logger;
     public List<WeatherForecast> WeatherForecasts { get; private set; } = new();
 
-    public PrivacyModel(ILogger<PrivacyModel> logger)
+    public WeatherModel(ILogger<WeatherModel> logger)
     {
         _logger = logger;
     }
