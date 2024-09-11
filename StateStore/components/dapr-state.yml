@@ -9,8 +9,8 @@ spec:
   version: v2
   metadata:
   - name: accountName
-    value: "mystorage911"
+    value: "STORAGE_ACCOUNT_NAME"
   - name: accountKey
-    value: "d1/SU4qwf1ts+2nX48adtTZW0T57QVDWSQboaMMEOpI2+boRUrzbyHcNs69jPxU2beq/MGE+SP/B+AStU9t8yA=="
+    value: "STORAGE_ACCOUNT_KEY"
   - name: containerName
-    value: "mystate"
+    value: "STORAGE_ACCOUNT_CONTAINER_NAME"
