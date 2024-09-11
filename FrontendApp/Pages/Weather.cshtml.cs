@@ -17,7 +17,6 @@ public class PrivacyModel : PageModel
     public async Task OnGet()
     {
 
-
         try
         {
             using var httpClient = new HttpClient();
