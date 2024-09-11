@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net.Http.Json;
+using Dapr.Client;
 
 namespace FrontendApp.Pages;
 
@@ -19,8 +20,8 @@ public class WeatherModel : PageModel
 
         try
         {
-            using var httpClient = new HttpClient();
-            WeatherForecasts = await httpClient.GetFromJsonAsync<List<WeatherForecast>>("http://localhost:5250/weatherforecast") ?? new();
+            var httpClient = DaprClient.CreateInvokeHttpClient();
+            WeatherForecasts = await httpClient.GetFromJsonAsync<List<WeatherForecast>>("http://weather-api/weatherforecast") ?? new();
         }
         catch (Exception ex)
         {
