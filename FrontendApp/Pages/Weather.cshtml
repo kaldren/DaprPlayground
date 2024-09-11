@@ -1,0 +1,21 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Weather";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>See the weather</p>
+
+@if (Model.WeatherForecasts.Any())
+{
+    <ul>
+        @foreach (var forecast in @Model.WeatherForecasts)
+        {
+            <li>@forecast.Date - @forecast.TemperatureC°C - @forecast.TemperatureF°F - @forecast.Summary</li>
+        }
+    </ul>
+}
+else {
+    <p>Loading...</p>
+}
